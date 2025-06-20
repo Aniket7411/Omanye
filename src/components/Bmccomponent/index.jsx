@@ -260,7 +260,7 @@ const BMCServicePage = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="py-16 bg-blue-600 text-white">
+      <div className="py-16 bg-[#00A3A1] text-white">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-3xl font-bold mb-4">Ready to work together</h3>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
@@ -358,7 +358,7 @@ const BMCServicePage = () => {
               </div>
               <div className="w-full lg:w-1/2">
                 <h3 className="text-2xl font-bold mb-4 text-gray-800 relative pb-2">
-                  <span className="absolute bottom-0 left-0 w-16 h-1 bg-blue-600"></span>
+                  <span className="absolute bottom-0 left-0 w-16 h-1 bg-[blue-600]"></span>
                   {service.title}
                 </h3>
                 <p className="text-gray-700 text-lg">
@@ -371,7 +371,7 @@ const BMCServicePage = () => {
       </div>
 
       {/* Footer */}
-      <footer className="py-12 bg-gray-900 text-white" id="footer">
+      {/* <footer className="py-12 bg-gray-900 text-white" id="footer">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full md:w-1/4 px-4 mb-8">
@@ -424,7 +424,7 @@ const BMCServicePage = () => {
             <p>&copy; {new Date().getFullYear()} OMANYE FZ -LLC. All Rights Reserved.</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
 
       {/* Mobile Menu Button */}
       <button 

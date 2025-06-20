@@ -159,7 +159,7 @@ const Header = () => {
 
                         <a
                             href="contact-us"
-                            className="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md"
+                            className="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#00a3A1] hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md"
                         >
                             Get a Quote
                             <FaLongArrowAltRight className="ml-1 text-xs" />

@@ -582,7 +582,7 @@ const ConstructionProducts = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-blue-700 text-white shadow-md">
+      <header className="bg-[#00a3A1] text-white shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold">Construction Products</h1>
           <button 
@@ -807,7 +807,7 @@ const ConstructionProducts = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8 mt-12">
+      {/* <footer className="bg-gray-800 text-white py-8 mt-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -854,7 +854,7 @@ const ConstructionProducts = () => {
             <p>&copy; {new Date().getFullYear()} Construction Products. All rights reserved.</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

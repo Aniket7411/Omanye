@@ -20,7 +20,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-gray-900 text-white pt-12 pb-6 px-4">
+    <footer className="bg-[#00A3A1] text-white pt-12 pb-6 px-4">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row flex-wrap gap-8 justify-between">
         
@@ -33,20 +33,20 @@ const Footer = () => {
               style={{ height: '50px' }}
             />
           </div>
-          <p className="text-gray-400 mb-6">
+          <p className="text-[#fff] mb-6">
             We're committed to elevating the construction experience with innovation and quality craftsmanship.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+            <a href="#" className=" hover:text-[#000] transition-colors">
               <FaFacebook size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+            <a href="#" className=" hover:text-[#000] transition-colors">
               <FaTwitter size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+            <a href="#" className=" hover:text-[#000] transition-colors">
               <FaLinkedin size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+            <a href="#" className=" hover:text-[#000] transition-colors">
               <FaInstagram size={20} />
             </a>
           </div>
@@ -54,13 +54,13 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div className="flex-1 min-w-[200px]">
-          <h3 className="text-orange-500 text-lg font-bold mb-4">Quick Links</h3>
+          <h3 className="text-[#000] text-lg font-bold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             {['About Us', 'Services', 'Projects', 'Our Team', 'Contact Us'].map((item) => (
               <li key={item}>
                 <a 
                   href="#" 
-                  className="text-gray-400 hover:text-orange-500 transition-colors flex items-center"
+                  className=" hover:text-[#000] transition-colors flex items-center"
                 >
                   <span className="mr-2">→</span> {item}
                 </a>
@@ -71,7 +71,7 @@ const Footer = () => {
 
         {/* Services */}
         <div className="flex-1 min-w-[200px]">
-          <h3 className="text-orange-500 text-lg font-bold mb-4">Our Services</h3>
+          <h3 className="text-[#000] text-lg font-bold mb-4">Our Services</h3>
           <ul className="space-y-2">
             {[
               'General Contracting',
@@ -83,7 +83,7 @@ const Footer = () => {
               <li key={service}>
                 <a 
                   href="#" 
-                  className="text-gray-400 hover:text-orange-500 transition-colors flex items-center"
+                  className=" hover:text-[#000] transition-colors flex items-center"
                 >
                   <span className="mr-2">→</span> {service}
                 </a>
@@ -94,25 +94,25 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div className="flex-1 min-w-[250px]">
-          <h3 className="text-orange-500 text-lg font-bold mb-4">Contact Us</h3>
+          <h3 className="text-[#000] text-lg font-bold mb-4">Contact Us</h3>
           <ul className="space-y-3">
             <li className="flex items-start">
-              <FaMapMarkerAlt className="text-orange-500 mt-1 mr-3 flex-shrink-0" />
-              <span className="text-gray-400">
+              <FaMapMarkerAlt className="text-[#000] mt-1 mr-3 flex-shrink-0" />
+              <span className="">
                 FOB 51927 Compass Building, Al Shohoda Road, Al Hamra Industrial Zone-FZ, Ras Al Khaimah, UAE
               </span>
             </li>
             <li className="flex items-center">
-              <FaPhoneAlt className="text-orange-500 mr-3" />
-              <span className="text-gray-400">+971 50 311 8846</span>
+              <FaPhoneAlt className="text-[#000] mr-3" />
+              <span className="">+971 50 311 8846</span>
             </li>
             <li className="flex items-center">
-              <FaEnvelope className="text-orange-500 mr-3" />
-              <span className="text-gray-400">gbd.omanyefz@gmail.com</span>
+              <FaEnvelope className="text-[#000] mr-3" />
+              <span className="">gbd.omanyefz@gmail.com</span>
             </li>
             <li className="flex items-center">
-              <FaClock className="text-orange-500 mr-3" />
-              <span className="text-gray-400">
+              <FaClock className="text-[#000] mr-3" />
+              <span className="">
                 Mon-Fri: 9:00 am - 5:00 pm<br />
                 Sat: 9:00 am - 2:00 pm
               </span>
@@ -123,7 +123,7 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-        <p className="text-gray-500 mb-4 md:mb-0">
+        <p className=" mb-4 md:mb-0">
           &copy; {new Date().getFullYear()} Omanye FZ-LLC. All rights reserved.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
@@ -131,7 +131,7 @@ const Footer = () => {
             <a 
               key={item} 
               href="#" 
-              className="text-gray-500 hover:text-orange-500 transition-colors text-sm"
+              className="text-gray-500 hover:text-[#000] transition-colors text-sm"
             >
               {item}
             </a>

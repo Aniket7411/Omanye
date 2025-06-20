@@ -118,7 +118,7 @@ const ContactUs = () => {
                                     </div>
                                     <button
                                         type="submit"
-                                        className="rts-btn btn-primary w-full md:w-auto px-8 py-3 bg-blue-900 hover:bg-blue-800 text-white font-bold rounded-lg transition duration-300"
+                                        className="rts-btn btn-primary w-full md:w-auto px-8 py-3 bg-[#00a3A1] hover:bg-blue-800 text-white font-bold rounded-lg transition duration-300"
                                     >
                                         Send Message
                                     </button>

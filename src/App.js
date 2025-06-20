@@ -11,6 +11,7 @@ import PostConstruction from './components/postconstruction';
 import TurnkeyProjects from './components/turnkeyprojects';
 import ContactUs from './components/contactus';
 import ConstructionProducts from './components/products';
+import ServicesPage from './components/services';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/turnkey-projects" element={<TurnkeyProjects />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/our-products" element={<ConstructionProducts />} />
+        <Route path="/our-services" element={<ServicesPage />} />
 
       </Routes>
       <Footer />

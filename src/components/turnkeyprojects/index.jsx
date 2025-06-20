@@ -185,7 +185,7 @@ const TurnkeyProjects = () => {
             </div>
 
             {/* Call to Action Section */}
-            <div className="rts-call-to-action py-16 bg-blue-900 text-white">
+            <div className="rts-call-to-action py-16 bg-[#00A3A1] text-white">
                 <div className="container mx-auto px-4">
                     <div className="call-to-action-area-service text-center p-8 md:p-12 rounded-xl">
                         <div className="inner max-w-3xl mx-auto">

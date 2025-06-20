@@ -19,14 +19,19 @@ const OmanyePage = () => {
 
   const bannerSlides = [
     {
+      image: "assets/images/banner/mk.webp",
       title: "Build Your Dream Project with Us Today!",
       text: "We are dedicated to building structures that last and relationships that endure, With a focus on quality, precision, and innovation, we provide a full range of construction services."
     },
     {
+      image: "assets/images/banner/12.webp",
+
       title: "Let Us Help You Build Extraordinary!",
       text: "We are dedicated to building structures that last and relationships that endure, With a focus on quality, precision, and innovation, we provide a full range of construction services."
     },
     {
+      image: "assets/images/banner/01.webp",
+
       title: "Start Building Your Project Today!",
       text: "We are dedicated to building structures that last and relationships that endure, With a focus on quality, precision, and innovation, we provide a full range of construction services."
     }
@@ -77,7 +82,7 @@ const OmanyePage = () => {
         <button onClick={toggleSidebar} className="absolute top-4 right-4 text-gray-600 hover:text-gray-900">
           <FaTimes className="text-2xl" />
         </button>
-        
+
         <div className="p-6 h-full flex flex-col">
           <div className="mb-8">
             <div className="thumbnail mb-4">
@@ -95,7 +100,7 @@ const OmanyePage = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="mobile-menu mt-auto">
             <nav className="mb-8">
               <ul className="space-y-4">
@@ -108,7 +113,7 @@ const OmanyePage = () => {
                 <li><a href="#footer" className="block hover:text-blue-600">Contact Us</a></li>
               </ul>
             </nav>
-            
+
             <div className="social-wrapper">
               <ul className="flex space-x-4">
                 <li><a href="#" className="text-gray-600 hover:text-blue-600"><FaFacebookF /></a></li>
@@ -124,18 +129,17 @@ const OmanyePage = () => {
       {/* Banner Swiper */}
       <div className="relative h-screen">
         {bannerSlides.map((slide, index) => (
-          <div 
+          <div
             key={index}
             className={`absolute inset-0 bg-cover bg-center flex items-center transition-opacity duration-1000 ${activeSlide === index ? 'opacity-100' : 'opacity-0'}`}
-            style={{ backgroundImage: "url('assets/images/banner/01.webp')" }}
-          >
+            style={{ backgroundImage: `url(${slide.image})` }}          >
             <div className="container mx-auto px-4">
               <div className="max-w-2xl">
                 <span className="text-blue-600 font-medium mb-2 block">Building the better future</span>
                 <h1 className="text-5xl font-bold text-white mb-4">{slide.title}</h1>
                 <p className="text-gray-200 mb-6">{slide.text}</p>
                 <div className="button-wrapper">
-                  <a href="#service" className="inline-flex items-center bg-white text-gray-900 px-6 py-3 rounded hover:bg-gray-100 transition">
+                  <a href="/our-services" className="inline-flex items-center bg-white text-gray-900 px-6 py-3 rounded hover:bg-gray-100 transition">
                     Our Services <img src="assets/images/icons/arrow-up-right-1.svg" alt="arrow" className="ml-2 h-4" />
                   </a>
                 </div>
@@ -143,10 +147,10 @@ const OmanyePage = () => {
             </div>
           </div>
         ))}
-        
+
         <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-2">
           {bannerSlides.map((_, index) => (
-            <button 
+            <button
               key={index}
               onClick={() => setActiveSlide(index)}
               className={`w-3 h-3 rounded-full ${activeSlide === index ? 'bg-white' : 'bg-gray-400'}`}
@@ -227,13 +231,13 @@ const OmanyePage = () => {
       </div>
 
       {/* Services */}
-      <div className="py-16 bg-gray-900 text-white" id="service">
+      <div className="py-16 bg-[#00A3A1] text-white" id="service">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="text-blue-400 font-medium mb-2 block">What We Offer</span>
             <h2 className="text-4xl font-bold">Explore Our Services</h2>
           </div>
-          
+
           <div className="flex overflow-x-auto pb-8 -mx-4">
             {services.map((service, index) => (
               <div key={index} className="flex-shrink-0 w-80 px-4">
@@ -279,7 +283,7 @@ const OmanyePage = () => {
                   Construction Builder
                 </h2>
               </div>
-              
+
               <div className="space-y-8">
                 <div className="flex">
                   <div className="flex-shrink-0 mr-6 relative">
@@ -291,7 +295,7 @@ const OmanyePage = () => {
                     <p className="text-gray-600">We begin with a thorough consultation to understand your vision, budget, and project goals. Our team works with you to develop a tailored plan</p>
                   </div>
                 </div>
-                
+
                 <div className="flex">
                   <div className="flex-shrink-0 mr-6 relative">
                     <img src="assets/images/service/08.svg" alt="service" className="h-12" />
@@ -302,7 +306,7 @@ const OmanyePage = () => {
                     <p className="text-gray-600">We begin with a thorough consultation to understand your vision, budget, and project goals. Our team works with you to develop a tailored plan</p>
                   </div>
                 </div>
-                
+
                 <div className="flex">
                   <div className="flex-shrink-0 mr-6 relative">
                     <img src="assets/images/service/09.svg" alt="service" className="h-12" />
@@ -320,13 +324,13 @@ const OmanyePage = () => {
       </div>
 
       {/* Projects */}
-      <div className="py-16 bg-gray-900 text-white" id="project">
+      <div className="py-16 bg-[#00A3A1] text-white" id="project">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="text-blue-400 font-medium mb-2 block">Recent Projects</span>
             <h2 className="text-4xl font-bold">Our Completed Projects</h2>
           </div>
-          
+
           <div className="flex overflow-x-auto pb-8 -mx-4">
             {projects.map((project, index) => (
               <div key={index} className="flex-shrink-0 w-96 px-4">
@@ -375,7 +379,7 @@ const OmanyePage = () => {
             <span className="text-blue-400 font-medium mb-2 block">Expert Team Members</span>
             <h2 className="text-4xl font-bold">Meet The Awesome Team</h2>
           </div>
-          
+
           <div className="flex flex-wrap -mx-4">
             <div className="w-full lg:w-6/12 px-4 mb-8">
               <div className="bg-gray-800 rounded-lg overflow-hidden flex flex-col lg:flex-row">
@@ -400,7 +404,7 @@ const OmanyePage = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="w-full lg:w-6/12 px-4">
               <div className="bg-gray-800 rounded-lg overflow-hidden mb-6 flex">
                 <a href="#team" className="thumbnail block w-1/3">
@@ -423,7 +427,7 @@ const OmanyePage = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-gray-800 rounded-lg overflow-hidden flex">
                 <a href="#team" className="thumbnail block w-1/3">
                   <img src={`assets/images/team/03.webp`} alt="team" className="w-full h-48 object-cover" />
@@ -460,7 +464,7 @@ const OmanyePage = () => {
               Get Our Service
             </h2>
           </div>
-          
+
           <div className="flex overflow-x-auto pb-8 -mx-4">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="flex-shrink-0 w-96 px-4">
@@ -493,7 +497,7 @@ const OmanyePage = () => {
       </div>
 
       {/* CTA */}
-      <div className="bg-blue-600 text-white">
+      <div className="bg-[#00A3A1] text-white">
         <div className="container mx-auto">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-5/12">
@@ -524,7 +528,7 @@ const OmanyePage = () => {
             <span className="text-blue-600 font-medium mb-2 block">Latest News</span>
             <h2 className="text-4xl font-bold">Articles & Blog Posts</h2>
           </div>
-          
+
           <div className="flex flex-wrap -mx-4">
             {blogs.map((blog, index) => (
               <div key={index} className="w-full md:w-1/3 px-4 mb-8">
@@ -532,8 +536,8 @@ const OmanyePage = () => {
                   <a href="#blog" className="thumbnail block relative">
                     <img src={`assets/images/blog/${blog.image}.webp`} alt="blog_card" className="w-full h-48 object-cover" />
                     <div className="absolute bottom-4 left-4 flex space-x-2">
-                      <span className="bg-blue-600 text-white text-xs px-2 py-1 rounded">{blog.time}</span>
-                      <span className="bg-white text-gray-800 text-xs px-2 py-1 rounded">{blog.location}</span>
+                      {/* <span className="bg-blue-600 text-white text-xs px-2 py-1 rounded">{blog.time}</span> */}
+                      {/* <span className="bg-white text-gray-800 text-xs px-2 py-1 rounded">{blog.location}</span> */}
                     </div>
                   </a>
                   <div className="p-6">
@@ -583,7 +587,7 @@ const OmanyePage = () => {
                 <a href="#" className="text-gray-400 hover:text-white"><FaLinkedinIn /></a>
               </div>
             </div>
-            
+
             <div className="w-full md:w-1/4 px-4 mb-8">
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2">
@@ -594,7 +598,7 @@ const OmanyePage = () => {
                 <li><a href="#blog" className="text-gray-400 hover:text-white">Blog</a></li>
               </ul>
             </div>
-            
+
             <div className="w-full md:w-1/4 px-4 mb-8">
               <h3 className="text-xl font-bold mb-4">Services</h3>
               <ul className="space-y-2">
@@ -605,7 +609,7 @@ const OmanyePage = () => {
                 <li><a href="#service" className="text-gray-400 hover:text-white">Renovation</a></li>
               </ul>
             </div>
-            
+
             <div className="w-full md:w-1/4 px-4 mb-8">
               <h3 className="text-xl font-bold mb-4">Contact Us</h3>
               <address className="text-gray-400 not-italic">
@@ -616,7 +620,7 @@ const OmanyePage = () => {
               </address>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400">
             <p>&copy; {new Date().getFullYear()} OMANYE FZ -LLC. All Rights Reserved.</p>
           </div>
@@ -624,7 +628,7 @@ const OmanyePage = () => {
       </footer>
 
       {/* Mobile Menu Button */}
-      <button 
+      <button
         onClick={toggleSidebar}
         className="fixed bottom-8 right-8 bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg lg:hidden"
       >

@@ -365,7 +365,7 @@ const PostConstruction = () => {
         <div className="container mx-auto px-4">
           <div className="row flex flex-wrap">
             <div className="col-lg-12 w-full">
-              <div className="call-to-action-area-service bg-blue-900 text-white p-12 rounded-xl text-center">
+              <div className="call-to-action-area-service bg-[#00A3A1] text-white p-12 rounded-xl text-center">
                 <div className="inner">
                   <h3 className="title text-3xl font-bold mb-4">Ready to work together</h3>
                   <p className="disc text-lg mb-8 max-w-2xl mx-auto">

@@ -150,9 +150,9 @@ const ConstructionServicePage = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="py-16 bg-blue-600 text-white">
+            <div className="py-16 bg-[#000] text-white">
                 <div className="container mx-auto px-4 text-center">
-                    <h3 className="text-3xl font-bold mb-4">Ready to work together</h3>
+                    <h3 className="text-3xl font-bold mb-4"></h3>
                     <p className="text-xl mb-8 max-w-3xl mx-auto">
                         Whether you have a project in mind and you're looking for a reliable construction
                         partner or you're looking to take the next step in your career, we want to hear from
@@ -165,7 +165,7 @@ const ConstructionServicePage = () => {
             </div>
 
             {/* Footer */}
-            <footer className="py-12 bg-gray-900 text-white" id="footer">
+            {/* <footer className="py-12 bg-gray-900 text-white" id="footer">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap -mx-4">
                         <div className="w-full md:w-1/4 px-4 mb-8">
@@ -218,7 +218,7 @@ const ConstructionServicePage = () => {
                         <p>&copy; {new Date().getFullYear()} OMANYE FZ -LLC. All Rights Reserved.</p>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
 
             {/* Mobile Menu Button */}
             <button
