@@ -158,7 +158,7 @@ const Header = () => {
                         </button>
 
                         <a
-                            href="contact.html"
+                            href="contact-us"
                             className="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md"
                         >
                             Get a Quote
@@ -233,7 +233,7 @@ const Header = () => {
                             <a href="our-products" className="block text-gray-800 hover:text-blue-600 font-medium py-3 border-b border-gray-200">Products</a>
 
                             <a
-                                href="contact.html"
+                                href="contact-us"
                                 className="block w-full text-center px-4 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 mt-4 transition-colors"
                             >
                                 Get a Quote
