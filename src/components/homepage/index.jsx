@@ -159,8 +159,9 @@ const OmanyePage = () => {
         </div>
       </div>
 
+\
       {/* Fun Facts */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-8 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap -mx-4">
             {funFacts.map((fact, index) => (

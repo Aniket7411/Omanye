@@ -60,7 +60,7 @@ const BMCServicePage = () => {
         <div className="p-6 h-full flex flex-col">
           <div className="mb-8">
             <div className="thumbnail mb-4">
-              <img src="assets/images/banner/04.jpg" alt="elevate" className="w-full h-48 object-cover rounded" />
+              <img src="../assets/images/banner/04.jpg" alt="elevate" className="w-full h-48 object-cover rounded" />
             </div>
             <div className="content">
               <h4 className="text-xl font-bold mb-2">We Build Building and Great Constructive Homes.</h4>
