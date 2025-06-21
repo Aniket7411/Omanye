@@ -12,6 +12,8 @@ import TurnkeyProjects from './components/turnkeyprojects';
 import ContactUs from './components/contactus';
 import ConstructionProducts from './components/products';
 import ServicesPage from './components/services';
+import ProductsPage from './components/productdetails';
+import Termsandcondition from './components/tnc';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/our-products" element={<ConstructionProducts />} />
         <Route path="/our-services" element={<ServicesPage />} />
+        <Route path="/products-detail" element={<ProductsPage />} />
+        <Route path="/terms_conditions" element={<Termsandcondition />} />
 
       </Routes>
       <Footer />

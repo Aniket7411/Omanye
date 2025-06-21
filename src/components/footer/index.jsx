@@ -56,7 +56,7 @@ const Footer = () => {
         <div className="flex-1 min-w-[200px]">
           <h3 className="text-[#000] text-lg font-bold mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            {['About Us', 'Services', 'Projects', 'Our Team', 'Contact Us'].map((item) => (
+            {['About Us'  , 'Projects', 'Terms & Conditions', 'Contact Us'].map((item) => (
               <li key={item}>
                 <a 
                   href="#" 

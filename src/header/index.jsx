@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaPhoneAlt, FaEnvelope, FaChevronDown, FaSearch, FaTimes, FaLongArrowAltRight, } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -95,14 +96,14 @@ const Header = () => {
 
                                         <ServiceMenuItem
                                             icon="assets/images/service/06.svg"
-                                            title="/green-construction"
+                                            title="Green-construction"
                                             description="  Green Building and energy
                                             efficient solutions, permanent
                                             prevention and treatment of damp
                                             prising and capillary rising,
                                             and smart building deploying
                                             reliable IoT technology."
-                                            link="/turnkey-projects"
+                                            link="/green-construction"
                                         />
                                     </div>
 
@@ -134,7 +135,7 @@ const Header = () => {
                                     {/* Services Image Column */}
                                     <div className="flex items-center justify-center overflow-hidden rounded-md">
                                         <img
-                                            src="assets/images/banner/mk.jpg"
+                                            src="assets/images/newimages/constructionhelmet.webp"
                                             alt="/construction Services"
                                             className="h-64 w-full object-cover transition-transform duration-500 hover:scale-105"
                                         />
@@ -145,6 +146,8 @@ const Header = () => {
 
                         <a href="/contact-us" className="text-gray-800 hover:text-blue-600 font-medium transition-colors">Contact</a>
                         <a href="/our-products" className="text-gray-800 hover:text-blue-600 font-medium transition-colors">Products</a>
+                                                <a href="/products-detail" className="text-gray-800 hover:text-blue-600 font-medium transition-colors">Product Query</a>
+
                     </nav>
 
                     {/* Header Actions */}
@@ -268,8 +271,12 @@ const Header = () => {
                                 <FaSearch className="text-lg" />
                             </button>
                         </div>
-                        <div className="mt-4 text-sm text-gray-500">
-                            <p>Popular searches: <a href="#" className="text-blue-600 hover:underline ml-2">construction materials</a>, <a href="#" className="text-blue-600 hover:underline">turnkey projects</a></p>
+                        <div className="mt-4 flex justify-between items-center text-sm text-gray-500">
+                            <p>Popular searches: <a href="/bmc-services" className="text-blue-600 hover:underline ml-2">Construction materials</a>, <a href="/turnkey-projects" className="text-blue-600 hover:underline">Turnkey projects</a></p>
+                          
+                          <Link to="/contact-us">
+                          <button type='button' className='bg-[#00A3A1] rounded-md text-[#fff] px-2 py-1'>Drop Query</button>
+                          </Link> 
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaTimes, FaFacebookF, FaTwitter, FaYoutube, FaLinkedinIn } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ConstructionServicePage = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -98,29 +99,44 @@ const ConstructionServicePage = () => {
             </div>
 
             {/* Banner */}
-            <div className="rts-banner-area bg-gray-100 py-24 relative">
-                <div className="container mx-auto px-4">
-                    <div className="text-center relative z-10">
-                        {/* <span className="text-blue-600 text-lg font-medium mb-2 block">Details</span> */}
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                            Construction Services
+
+
+            <div className="rts-banner-area relative    py-8 md:py-12"
+                style={{
+                    backgroundImage: "url('assets/images/service/17.webp')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundBlendMode: "overlay",
+                    width:"100vw"
+                }}>
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 "></div>
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="text-center max-w-3xl mx-auto">
+                        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                            Construction <span className="text-[#00A3A1]">Services</span>
                         </h1>
-                        {/* <div className="breadcrumb text-gray-600">
-                            <a href="#" className="hover:text-blue-600">home</a>
-                        </div> */}
+
+                        <p className="text-lg md:text-xl text-[#fff] mb-6">
+                            Streamlined construction sourcing to delivery
+                        </p>
+                        <Link to="/contact-us">
+                            <button className="px-6 py-2 bg-[#00A3A1] hover:bg-teal-600 text-white font-medium rounded-md transition duration-300">
+                                Request Quote
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
 
-            {/* Main Image */}
-            <div className="py-8">
-                <div className="container mx-auto px-4">
-                    <img src="assets/images/service/17.webp" alt="Construction Services" className="w-full rounded-lg shadow-lg" />
-                </div>
-            </div>
+
+     
 
             {/* Service Features */}
-            <div className="py-8 bg-white">
+            <div className="py-4x bg-white">
                 <div className="container mx-auto px-4">
                     {services.map((service) => (
                         <div key={service.id} className="py-8">

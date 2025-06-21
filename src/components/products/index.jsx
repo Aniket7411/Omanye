@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-// Full product data structure
+// Full product data structure with image paths
 const productData = {
   categories: [
     {
       id: 'building-hardware',
       name: 'Building & Hardware',
       description: 'Building supplies, timber, fencing and facades',
+      image: 'assets/images/banner/01.webp',
       subcategories: [
         {
           id: 'building-supplies',
           name: 'Building Supplies',
+          image: 'assets/images/categories/building-supplies.webp',
           products: [
             'Concrete Products, Prefabricated Concrete Support Structures',
             'Driveway & Porcelain Paving',
@@ -27,6 +29,7 @@ const productData = {
         {
           id: 'facades-fencing',
           name: 'Facades and Fencing',
+          image: 'assets/images/categories/fencing.webp',
           products: [
             'Window Handles, Fasteners & Stays',
             'Doors for Home and Industry (Internal, External, Security, Fire Rated, Industrial)',
@@ -40,10 +43,12 @@ const productData = {
       id: 'kitchen-bathroom',
       name: 'Kitchen and Bathroom',
       description: 'Bathroom suites, kitchen appliances and units',
+      image: 'assets/images/banner/mk.webp',
       subcategories: [
         {
           id: 'bathroom-plumbing',
           name: 'Bathroom and Plumbing',
+          image: 'assets/images/categories/bathroom.webp',
           products: [
             'Wastes Traps & Overflow and Kitchen Sinks Accessories',
             'Pipes, Plumbing Supplies',
@@ -65,6 +70,7 @@ const productData = {
         {
           id: 'bathroom-suite',
           name: 'Bathroom Suite',
+          image: 'assets/images/categories/bathroom-suite.webp',
           products: [
             'Wall Hung Toilet',
             'Freestanding Baths and Home Spa',
@@ -75,6 +81,7 @@ const productData = {
         {
           id: 'kitchen-appliances',
           name: 'Kitchen Appliances',
+          image: 'assets/images/categories/kitchen-appliances.webp',
           products: [
             'Cooker',
             'Kitchen Sinks, Stainless Steel Sinks',
@@ -94,6 +101,7 @@ const productData = {
         {
           id: 'kitchen-units',
           name: 'Kitchens',
+          image: 'assets/images/categories/kitchen.webp',
           products: [
             'Kitchen Units And Cabinets',
             'Complete Kitchen Units Supply',
@@ -111,10 +119,12 @@ const productData = {
       id: 'home-bedrooms',
       name: 'Home and Bedrooms',
       description: 'Furniture, appliances and furnishings',
+      image: 'assets/images/categories/home-furniture.webp',
       subcategories: [
         {
           id: 'home-furniture',
           name: 'Home Furniture',
+          image: 'assets/images/categories/furniture.webp',
           products: [
             'Bed And Mattress',
             'Bedside Table',
@@ -125,6 +135,7 @@ const productData = {
         {
           id: 'home-furnishing',
           name: 'Home Furnishing',
+          image: 'assets/images/categories/furnishing.webp',
           products: [
             'Wall Art And Pictures',
             'Clocks And Home Accessories',
@@ -137,6 +148,7 @@ const productData = {
         {
           id: 'cooking-dining',
           name: 'Cooking and Dining',
+          image: 'assets/images/categories/dining.webp',
           products: [
             'Dinner Sets, Bowls, Cutlery and Dinner Plate Sets',
             'Drinkware, drinking cups & wine glasses for Special Occasions',
@@ -149,10 +161,12 @@ const productData = {
       id: 'mep',
       name: 'MEP (Mechanical, Electrical, Plumbing)',
       description: 'Lighting, electricals and plumbing systems',
+      image: 'assets/images/categories/mep.webp',
       subcategories: [
         {
           id: 'mechanical',
           name: 'Mechanical',
+          image: 'assets/images/categories/mechanical.webp',
           products: [
             'Fans and Extractors',
             'HVAC',
@@ -164,6 +178,7 @@ const productData = {
         {
           id: 'electrical-lighting',
           name: 'Electricals and Lighting',
+          image: 'assets/images/categories/electrical.webp',
           products: [
             'Standard Electrical Installation',
             'Advanced Electrical Installation',
@@ -182,6 +197,7 @@ const productData = {
         {
           id: 'lights',
           name: 'Lights',
+          image: 'assets/images/categories/lighting.webp',
           products: [
             'Indoor range (Downlights, Projectors, Ceiling, Linear systems, etc)',
             'Outdoor range (Ceiling lamps, Wall lamps, Bollards & poles, etc)',
@@ -194,6 +210,7 @@ const productData = {
         {
           id: 'plumbing',
           name: 'Plumbing',
+          image: 'assets/images/categories/plumbing.webp',
           products: [
             'Plumbing fixtures and systems'
           ]
@@ -204,10 +221,12 @@ const productData = {
       id: 'tools-equipment',
       name: 'Tools and Equipment',
       description: 'Hand tools, power tools and equipment',
+      image: 'assets/images/categories/tools.webp',
       subcategories: [
         {
           id: 'hand-tools',
           name: 'Hand Tools',
+          image: 'assets/images/categories/hand-tools.webp',
           products: [
             'Hammers, Crowbars And Axes',
             'Screwdrivers',
@@ -228,6 +247,7 @@ const productData = {
         {
           id: 'equipment',
           name: 'Equipment',
+          image: 'assets/images/categories/equipment.webp',
           products: [
             'Brackets',
             'Nails',
@@ -244,6 +264,7 @@ const productData = {
         {
           id: 'power-tools',
           name: 'Power Tools',
+          image: 'assets/images/categories/power-tools.webp',
           products: [
             'Drills (Combi, Hammer, SDS, Angle)',
             'Saws (Circular, Jig, Reciprocating)',
@@ -258,6 +279,7 @@ const productData = {
         {
           id: 'power-tool-accessories',
           name: 'Power Tools Accessories',
+          image: 'assets/images/categories/tool-accessories.webp',
           products: [
             'Drilling Sets',
             'Drilling Bits',
@@ -272,6 +294,7 @@ const productData = {
         {
           id: 'tiling-tools',
           name: 'Tiling Tools and Accessories',
+          image: 'assets/images/categories/tiling-tools.webp',
           products: [
             'Tile Spacer',
             'Tile Cutter',
@@ -281,6 +304,7 @@ const productData = {
         {
           id: 'measure-tools',
           name: 'Measure and Level Tools',
+          image: 'assets/images/categories/measure-tools.webp',
           products: [
             'Tape Measure',
             'Spirit Levels',
@@ -294,10 +318,12 @@ const productData = {
       id: 'outdoor-garden',
       name: 'Outdoor, Garden and Public Space',
       description: 'Garden tools, furniture and outdoor items',
+      image: 'assets/images/categories/garden.webp',
       subcategories: [
         {
           id: 'outdoor-garden',
           name: 'Outdoor and Garden',
+          image: 'assets/images/categories/outdoor.webp',
           products: [
             'Garden Power Tools',
             'Garden Furniture',
@@ -312,10 +338,12 @@ const productData = {
       id: 'tiling-flooring',
       name: 'Tiling and Flooring',
       description: 'Flooring options, tiles and accessories',
+      image: 'assets/images/categories/flooring.webp',
       subcategories: [
         {
           id: 'flooring',
           name: 'Flooring',
+          image: 'assets/images/categories/floor-materials.webp',
           products: [
             'Laminate Flooring',
             'Real Wood Top Layer Flooring',
@@ -325,6 +353,7 @@ const productData = {
         {
           id: 'tiles',
           name: 'Tiles',
+          image: 'assets/images/categories/tiles.webp',
           products: [
             'Vinyl Flooring',
             'Vinyl Floating Flooring',
@@ -342,6 +371,7 @@ const productData = {
         {
           id: 'flooring-accessories',
           name: 'Accessories and Tools',
+          image: 'assets/images/categories/flooring-tools.webp',
           products: [
             'Flooring and Tiling Supplies',
             'Tiling Adhesives',
@@ -357,10 +387,12 @@ const productData = {
       id: 'painting-decoration',
       name: 'Painting and Decoration',
       description: 'Paints, treatments and decorating tools',
+      image: 'assets/images/categories/painting.webp',
       subcategories: [
         {
           id: 'paint-treatment',
           name: 'Paint and Wood treatment',
+          image: 'assets/images/categories/paint.webp',
           products: [
             'Paint',
             'Masonry Paint',
@@ -377,6 +409,7 @@ const productData = {
         {
           id: 'decorating-tools',
           name: 'Decorating Tools and Supplies',
+          image: 'assets/images/categories/painting-tools.webp',
           products: [
             'Paint Brushes & Sprayers',
             'Tapes',
@@ -393,10 +426,12 @@ const productData = {
       id: 'ceiling-cladding',
       name: 'Ceiling, Claddings & Partitioning',
       description: 'Plaster products and ceiling materials',
+      image: 'assets/images/categories/ceiling.webp',
       subcategories: [
         {
           id: 'ceiling-materials',
           name: 'Ceiling Materials',
+          image: 'assets/images/categories/ceiling-materials.webp',
           products: [
             'Plaster Products',
             'Plasterboard',
@@ -411,10 +446,12 @@ const productData = {
       id: 'screws-fittings',
       name: 'Screws, Nails and Fittings',
       description: 'Fasteners, hardware and accessories',
+      image: 'assets/images/categories/hardware.webp',
       subcategories: [
         {
           id: 'screws',
           name: 'Screws',
+          image: 'assets/images/categories/screws.webp',
           products: [
             'Screws Trade Packs',
             'Wood Screws',
@@ -434,6 +471,7 @@ const productData = {
         {
           id: 'fixers-fasteners',
           name: 'Fixers and Fasteners',
+          image: 'assets/images/categories/fasteners.webp',
           products: [
             'Wall Plugs',
             'Frame and Hammer Fixings',
@@ -450,6 +488,7 @@ const productData = {
         {
           id: 'nails',
           name: 'Nails',
+          image: 'assets/images/categories/nails.webp',
           products: [
             'Bright Nails',
             'Galvanised Nails',
@@ -460,6 +499,7 @@ const productData = {
         {
           id: 'hardware-accessories',
           name: 'Hardware Accessories',
+          image: 'assets/images/categories/hardware-accessories.webp',
           products: [
             'Door Handles',
             'Hinges and Bolts',
@@ -479,10 +519,12 @@ const productData = {
       id: 'finishes-decoration',
       name: 'Finishes and Decoration',
       description: 'Interior and exterior finishing solutions',
+      image: 'assets/images/categories/finishes.webp',
       subcategories: [
         {
           id: 'finishes-solutions',
           name: 'Finishes Solutions',
+          image: 'assets/images/categories/finishing-solutions.webp',
           products: [
             'Interior Finishes',
             'Exterior Finishes',
@@ -498,10 +540,12 @@ const productData = {
       id: 'construction-chemicals',
       name: 'Construction Chemicals',
       description: 'Specialty chemicals for construction',
+      image: 'assets/images/categories/chemicals.webp',
       subcategories: [
         {
           id: 'chemical-solutions',
           name: 'Chemical Solutions',
+          image: 'assets/images/categories/construction-chemicals.webp',
           products: [
             'Waterproofing',
             'Sealants',
@@ -536,6 +580,7 @@ const ConstructionProducts = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   // Filter products based on search term
   useEffect(() => {
@@ -552,7 +597,9 @@ const ConstructionProducts = () => {
             results.push({
               product,
               category: category.name,
-              subcategory: subcategory.name
+              subcategory: subcategory.name,
+              categoryId: category.id,
+              subcategoryId: subcategory.id
             });
           }
         });
@@ -571,6 +618,12 @@ const ConstructionProducts = () => {
   const handleSubcategorySelect = (subcategory) => {
     setSelectedSubcategory(subcategory);
     setIsMobileMenuOpen(false);
+  };
+
+  const handleProductSelect = (product, categoryId, subcategoryId) => {
+    // Encode the product name for URL
+    const encodedProduct = encodeURIComponent(product);
+    navigate(`/products/${categoryId}/${subcategoryId}/${encodedProduct}`);
   };
 
   const resetSelection = () => {
@@ -664,10 +717,16 @@ const ConstructionProducts = () => {
                 <h3 className="font-medium text-gray-700 mb-2">Search Results ({filteredProducts.length})</h3>
                 <ul className="space-y-2">
                   {filteredProducts.map((item, index) => (
-                    <li key={index} className="p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition cursor-pointer">
+                    <Link to="/contact-us">
+                    <li 
+                      key={index} 
+                      className="p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition cursor-pointer"
+                      onClick={() => handleProductSelect(item.product, item.categoryId, item.subcategoryId)}
+                    >
                       <p className="font-medium">{item.product}</p>
                       <p className="text-sm text-gray-600">{item.category} &gt; {item.subcategory}</p>
                     </li>
+                    </Link>
                   ))}
                 </ul>
               </div>
@@ -687,9 +746,29 @@ const ConstructionProducts = () => {
             <div className="bg-white rounded-lg shadow-md p-4 md:p-6">
               {!selectedCategory && !selectedSubcategory ? (
                 <div className="text-center py-8">
-                  <svg className="mx-auto h-16 w-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
+                  <div className="mx-auto mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl">
+                    <div className="relative h-40 rounded-lg overflow-hidden">
+                      <img 
+                        src="assets/images/banner/mk.webp" 
+                        alt="Kitchen and Bathroom" 
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="relative h-40 rounded-lg overflow-hidden">
+                      <img 
+                        src="assets/images/banner/12.webp" 
+                        alt="Building Materials" 
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="relative h-40 rounded-lg overflow-hidden">
+                      <img 
+                        src="assets/images/banner/01.webp" 
+                        alt="Construction Products" 
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
                   <h3 className="mt-4 text-lg font-medium text-gray-900">Browse Construction Products</h3>
                   <p className="mt-2 text-gray-500 max-w-md mx-auto">
                     Select a category from the sidebar or use the search bar to find specific construction products and equipment.
@@ -708,17 +787,42 @@ const ConstructionProducts = () => {
                     </button>
                     <h2 className="text-xl font-semibold">{selectedCategory.name}</h2>
                   </div>
+                  
+                  {/* Category Banner Image */}
+                  {selectedCategory.image && (
+                    <div className="relative h-48 w-full rounded-lg overflow-hidden mb-6">
+                      <img 
+                        src={selectedCategory.image} 
+                        alt={selectedCategory.name} 
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <h3 className="text-white text-2xl font-bold">{selectedCategory.name}</h3>
+                      </div>
+                    </div>
+                  )}
+                  
                   <p className="text-gray-600 mb-6">{selectedCategory.description}</p>
                   
                   <h3 className="text-lg font-medium mb-4">Subcategories</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {selectedCategory.subcategories.map((subcategory) => (
+                      
                       <div
                         key={subcategory.id}
                         onClick={() => handleSubcategorySelect(subcategory)}
                         className="border rounded-lg p-4 cursor-pointer hover:bg-gray-50 transition flex flex-col"
                       >
-                        <div className="flex items-start">
+                        {subcategory.image && (
+                          <div className="relative h-32 w-full rounded-md overflow-hidden mb-3">
+                            <img 
+                              src={subcategory.image} 
+                              alt={subcategory.name} 
+                              className="absolute inset-0 w-full h-full object-cover"
+                            />
+                          </div>
+                        )}
+                        <div className="flex items-start flex-grow">
                           <div className="flex-shrink-0 h-10 w-10 rounded-md bg-blue-50 text-blue-600 flex items-center justify-center mr-3">
                             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -731,9 +835,11 @@ const ConstructionProducts = () => {
                             </p>
                           </div>
                         </div>
+                        <Link to="/products-detail">
                         <button className="mt-3 text-sm text-blue-600 hover:text-blue-800 self-start">
                           View all →
                         </button>
+                        </Link>
                       </div>
                     ))}
                   </div>
@@ -753,6 +859,20 @@ const ConstructionProducts = () => {
                       {selectedCategory.name} &gt; {selectedSubcategory.name}
                     </h2>
                   </div>
+                  
+                  {/* Subcategory Banner Image */}
+                  {selectedSubcategory.image && (
+                    <div className="relative h-48 w-full rounded-lg overflow-hidden mb-6">
+                      <img 
+                        src={selectedSubcategory.image} 
+                        alt={selectedSubcategory.name} 
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <h3 className="text-white text-2xl font-bold">{selectedSubcategory.name}</h3>
+                      </div>
+                    </div>
+                  )}
                   
                   <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <p className="text-gray-600">
@@ -774,7 +894,11 @@ const ConstructionProducts = () => {
                   
                   <ul className="space-y-3">
                     {selectedSubcategory.products.map((product, index) => (
-                      <li key={index} className="border rounded-md p-4 hover:shadow-md transition">
+                      <li 
+                        key={index} 
+                        className="border rounded-md p-4 hover:shadow-md transition cursor-pointer"
+                        onClick={() => handleProductSelect(product, selectedCategory.id, selectedSubcategory.id)}
+                      >
                         <div className="flex items-start">
                           <div className="flex-shrink-0 h-12 w-12 rounded-md bg-gray-200 flex items-center justify-center mr-4">
                             <svg className="h-6 w-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -785,15 +909,12 @@ const ConstructionProducts = () => {
                             <h3 className="font-medium">{product}</h3>
                             <div className="mt-2 flex flex-wrap gap-2">
                               <span className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">In Stock</span>
-                              {/* <span className="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-full">Free Delivery</span> */}
                             </div>
                           </div>
                           <div className="ml-4 flex flex-col items-end">
-                            <Link to="/contact-us">
                             <button className="mt-2 px-3 py-1 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 transition">
-                              Contact Us
+                              View Details
                             </button>
-                            </Link>
                           </div>
                         </div>
                       </li>
@@ -805,56 +926,6 @@ const ConstructionProducts = () => {
           )}
         </main>
       </div>
-
-      {/* Footer */}
-      {/* <footer className="bg-gray-800 text-white py-8 mt-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Construction Products</h3>
-              <p className="text-gray-400">
-                Your one-stop shop for all construction materials and equipment.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-medium mb-4">Categories</h4>
-              <ul className="space-y-2">
-                {productData.categories.slice(0, 5).map(category => (
-                  <li key={category.id}>
-                    <button 
-                      onClick={() => handleCategorySelect(category)}
-                      className="text-gray-400 hover:text-white transition"
-                    >
-                      {category.name}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-medium mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition">About Us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition">Contact</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition">Shipping Policy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition">Returns</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-medium mb-4">Contact</h4>
-              <address className="text-gray-400 not-italic">
-                123 Construction Way<br />
-                Building City, BC 12345<br />
-                <a href="tel:+1234567890" className="hover:text-white transition">(123) 456-7890</a><br />
-                <a href="mailto:info@constructionproducts.com" className="hover:text-white transition">info@constructionproducts.com</a>
-              </address>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Construction Products. All rights reserved.</p>
-          </div>
-        </div>
-      </footer> */}
     </div>
   );
 };

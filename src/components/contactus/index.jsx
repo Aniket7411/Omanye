@@ -1,19 +1,38 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ContactUs = () => {
     return (
         <div className="font-sans text-gray-800">
             {/* Banner Section */}
-            <div className="rts-banner-area rts-section-gap rts-breadcrumb-area relative bg-blue-50 py-20">
-                <div className="container mx-auto px-4">
-                    <div className="breadcrumb-area-inner text-center">
-                        {/* <span className="water-text text-4xl font-bold opacity-10 block mb-4">Contact</span> */}
-                        <h1 className="title text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-                        {/* <div className="nav-area-navigation text-lg">
-                            <a href="#" className="text-blue-600 hover:underline">home</a>
-                            <span className="mx-2">/</span>
-                            <a href="#" className="text-gray-600">Contact Us</a>
-                        </div> */}
+        
+
+            <div className="rts-banner-area relative bg-gray-900 py-16 md:py-20"
+                style={{
+                    backgroundImage: "url('assets/images/newimages/contactus.webp')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundBlendMode: "overlay"
+                }}>
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800 opacity-90"></div>
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="text-center max-w-3xl mx-auto">
+                        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                            Contact <span className="text-[#00A3A1]">Us</span>
+                        </h1>
+
+                        <p className="text-lg md:text-xl text-gray-300 mb-6">
+                            Streamlined construction sourcing to delivery
+                        </p>
+                        <Link to="/contact-us">
+                            <button className="px-6 py-2 bg-[#00A3A1] hover:bg-teal-600 text-white font-medium rounded-md transition duration-300">
+                                Request Quote
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -76,7 +95,7 @@ const ContactUs = () => {
                         {/* Right Side - Contact Form */}
                         <div className="lg:w-1/2">
                             <div className="contact-form-area-wrapper bg-white p-8 rounded-xl shadow-lg">
-                                <h4 className="text-2xl font-bold mb-6">Let's Get in Touch</h4>
+                                <h4 className="text-2xl font-bold mb-6">Let's Get in Touch / Share Requiements </h4>
                                 <form id="contact-form" className="space-y-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="single">

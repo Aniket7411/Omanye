@@ -4,24 +4,40 @@ const TurnkeyProjects = () => {
     return (
         <div className="font-sans text-gray-800">
             {/* Banner Section */}
-            <div className="rts-banner-area rts-section-gap rts-breadcrumb-area offers relative bg-blue-50 py-20">
-                <div className="container mx-auto px-4">
-                    <div className="breadcrumb-area-inner text-center">
-                        <span className="water-text text-4xl font-bold opacity-10 block mb-4">Details</span>
-                        <h1 className="title text-4xl md:text-5xl font-bold mb-6">
+            <div className="rts-banner-area rts-section-gap rts-breadcrumb-area offers relative bg-blue-50 py-20"
+                style={{
+                    backgroundImage: "url('assets/images/newimages/turnkeyproject.webp')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat"
+                }}>
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 opacity-70"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-r "></div> */}
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="breadcrumb-area-inner text-center max-w-4xl mx-auto">
+                        <h1 className="title text-4xl md:text-5xl lg:text-6xl font-bold mb-3 text-white">
                             Turnkey Projects
                         </h1>
-                        <div className="nav-area-navigation text-lg">
-                            <a href="#" className="text-blue-600 hover:underline">home</a>
-                        </div>
+
+                        <p className="text-lg md:text-xl text-blue-100 mb-3">
+                            Complete end-to-end construction solutions from design to delivery.
+                            Our turnkey approach ensures seamless execution and quality results.
+                        </p>
+
+
+
+
                     </div>
                 </div>
             </div>
 
             {/* Service Details Section */}
-            <div className="service-details-area py-16">
+            <div className="service-details-area py-6">
                 <div className="container mx-auto px-4">
-                    <div className="service-details-inner-area-wrapper bg-white p-5 md:p-8 rounded-lg shadow-md">
+                    <div className="service-details-inner-area-wrapper bg-white p-5 md:p-1 rounded-lg shadow-md">
                         {/* Responsive Turnkey Construction Services */}
                         <div className="max-w-6xl mx-auto">
                             {/* Service 1 */}
@@ -53,7 +69,7 @@ const TurnkeyProjects = () => {
                             </div>
 
                             {/* Service 2 */}
-                            <div className="service-container flex flex-col md:flex-row items-center my-12 md:my-16 p-6 md:p-8 bg-gradient-to-r from-gray-50 to-white rounded-xl shadow-lg transition-all duration-400 overflow-hidden hover:shadow-xl">
+                            <div className="service-container flex flex-col md:flex-row items-center my-4 md:my-8 p-6 md:p-8 bg-gradient-to-r from-gray-50 to-white rounded-xl shadow-lg transition-all duration-400 overflow-hidden hover:shadow-xl">
                                 <div className="service-image mb-6 md:mb-0 md:mr-8 overflow-hidden rounded-lg shadow-md flex-shrink-0 w-full md:w-1/2 relative">
                                     <img
                                         src="assets/images/service/DEUOR.jpg"
@@ -170,9 +186,13 @@ const TurnkeyProjects = () => {
                                         manuals and warranty documentation.
                                     </p>
                                 </div>
+
                             </div>
+
                         </div>
                     </div>
+
+
 
                     <div className="service-details-main-wrapper-thumbnail my-12">
                         <img
@@ -184,23 +204,36 @@ const TurnkeyProjects = () => {
                 </div>
             </div>
 
-            {/* Call to Action Section */}
-            <div className="rts-call-to-action py-16 bg-[#00A3A1] text-white">
+            {/* Enhanced Call to Action Section */}
+            <div className="rts-call-to-action py-8 bg-gradient-to-r from-[#005f5d] to-[#00827f] text-white">
                 <div className="container mx-auto px-4">
-                    <div className="call-to-action-area-service text-center p-8 md:p-12 rounded-xl">
+                    <div className="call-to-action-area-service text-center p-6 md:p-6 rounded-xl bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20">
                         <div className="inner max-w-3xl mx-auto">
-                            <h3 className="title text-2xl md:text-3xl font-bold mb-4">Ready to work together</h3>
-                            <p className="disc text-lg mb-8">
-                                Whether you have a project in mind and you're looking for a reliable construction
-                                partner or you're looking to take the next step in your career, we want to hear from
-                                you!
+                            <h3 className="title text-2xl md:text-4xl font-bold mb-6">
+                                Let's Build Something Extraordinary Together
+                            </h3>
+                            <p className="disc text-lg md:text-xl mb-8 leading-relaxed">
+                                From groundbreaking ideas to finished structures, we partner with you at every step.
+                                Our team of certified professionals brings decades of combined experience to deliver
+                                construction solutions that are innovative, durable, and tailored to your vision.
                             </p>
-                            <a
-                                href="#"
-                                className="rts-btn btn-primary inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
-                            >
-                                Make An Appointment
-                            </a>
+                            <div className="flex flex-col sm:flex-row justify-center gap-4">
+                                <a
+                                    href="contact-us"
+                                    className="rts-btn btn-primary inline-block bg-white text-[#005f5d] hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg"
+                                >
+                                    Start Your Project
+                                </a>
+                              
+                            </div>
+
+                            {/* Trust Indicators */}
+                            <div className="mt-10 pt-6 border-t border-white border-opacity-20">
+                                <p className="text-sm md:text-base opacity-80 mb-4">
+                                    Trusted by industry leaders and local businesses alike
+                                </p>
+                          
+                            </div>
                         </div>
                     </div>
                 </div>

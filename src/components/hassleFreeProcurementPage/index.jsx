@@ -68,8 +68,8 @@ const HassleFreeProcurementPage = () => {
                     <div className="mobile-menu mt-auto">
                         <nav className="mb-8">
                             <ul className="space-y-4">
-                                <li><a href="#" className="block hover:text-blue-600">Home</a></li>
-                                <li><a href="#about" className="block hover:text-blue-600">About</a></li>
+                                <li><a href="/" className="block hover:text-blue-600">Home</a></li>
+                                <li><a href="/about-us" className="block hover:text-blue-600">About</a></li>
                                 <li><a href="#service" className="block hover:text-blue-600">Services</a></li>
                                 <li><a href="#project" className="block hover:text-blue-600">Projects</a></li>
                                 <li><a href="#team" className="block hover:text-blue-600">Team</a></li>
@@ -91,19 +91,35 @@ const HassleFreeProcurementPage = () => {
             </div>
 
             {/* Banner */}
-            <div className="rts-banner-area bg-blue-50 py-24 relative">
-                <div className="container mx-auto px-4">
-                    <div className="text-center relative z-10">
-                        {/* <span className="text-blue-600 text-lg font-medium mb-2 block">Details</span> */}
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                            Hassle-Free Procurement Services
-                        </h1>
-                        {/* <div className="breadcrumb text-gray-600">
-                            <a href="#" className="hover:text-blue-600">home</a>
-                        </div> */}
-                    </div>
-                </div>
-            </div>
+       
+<div className="rts-banner-area relative bg-gray-900 py-16 md:py-20"
+     style={{
+       backgroundImage: "url('assets/images/newimages/procurement.webp')",
+       backgroundSize: "cover",
+       backgroundPosition: "center",
+       backgroundRepeat: "no-repeat",
+       backgroundBlendMode: "overlay"
+     }}>
+
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800 opacity-90"></div>
+
+  <div className="container mx-auto px-4 relative z-10">
+    <div className="text-center max-w-3xl mx-auto">
+      <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+        Hassle-Free <span className="text-[#00A3A1]">Procurement</span>
+      </h1>
+
+      <p className="text-lg md:text-xl text-gray-300 mb-6">
+        Streamlined construction sourcing to delivery
+      </p>
+
+      <button className="px-6 py-2 bg-[#00A3A1] hover:bg-teal-600 text-white font-medium rounded-md transition duration-300">
+        Request Quote
+      </button>
+    </div>
+  </div>
+</div>
 
             {/* Service Details */}
             <div className="py-16 bg-white">
