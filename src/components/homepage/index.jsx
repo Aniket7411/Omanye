@@ -135,7 +135,7 @@ const OmanyePage = () => {
             style={{ backgroundImage: `url(${slide.image})` }}          >
             <div className="container mx-auto px-4">
               <div className="max-w-2xl">
-                <span className="text-blue-600 font-medium mb-2 block">Building the better future</span>
+                <span className="text-white font-medium mb-2 block">Building the better future</span>
                 <h1 className="text-5xl font-bold text-white mb-4">{slide.title}</h1>
                 <p className="text-gray-200 mb-6">{slide.text}</p>
                 <div className="button-wrapper">
@@ -189,7 +189,7 @@ const OmanyePage = () => {
                   <img src="assets/images/about/01.webp" alt="journey-area" className="w-full" />
                 </div>
                 <div className="flex mt-6">
-                  <div className="bg-blue-600 p-6 rounded-lg mr-4 text-center">
+                  <div className="bg-[#00A3A1] p-6 rounded-lg mr-4 text-center">
                     <h2 className="text-3xl font-bold">500+</h2>
                     <span className="text-sm">Complete Projects</span>
                   </div>
@@ -201,7 +201,7 @@ const OmanyePage = () => {
               </div>
             </div>
             <div className="w-full lg:w-7/12 lg:pl-12">
-              <span className="text-blue-400 font-medium mb-2 block">About our Company</span>
+              <span className="text-white font-medium mb-2 block">About our Company</span>
               <h2 className="text-4xl font-bold mb-6">Delivering our clients more project clarity, greater insight, and less chaos.</h2>
               <p className="text-gray-300 mb-4">
                 Artificial Intelligence refers to the development of computer systems that can perform tasks
@@ -213,7 +213,7 @@ const OmanyePage = () => {
                 specific tasks, and General or Strong AI, which possesses human-level intelligence and
                 can handle a wide range of tasks.
               </p>
-              <a href="#about" className="inline-flex items-center border border-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
+              <a href="#about" className="inline-flex items-center border border-gray-600 text-white px-6 py-3 rounded hover:bg-gray-600 transition">
                 Explore More <img src="assets/images/arrow-up-right-2.svg" alt="service" className="ml-2 h-4" />
               </a>
             </div>
@@ -235,7 +235,7 @@ const OmanyePage = () => {
       <div className="py-16 bg-[#00A3A1] text-white" id="service">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-blue-400 font-medium mb-2 block">What We Offer</span>
+            <span className="text-white font-medium mb-2 block">What We Offer</span>
             <h2 className="text-4xl font-bold">Explore Our Services</h2>
           </div>
 
@@ -250,7 +250,7 @@ const OmanyePage = () => {
                   <div className="inner">
                     <h5 className="text-xl font-bold mb-2">{service.title}</h5>
                     <p className="text-gray-400 mb-4">{service.text}</p>
-                    <a href="#service" className="text-blue-400 hover:text-blue-300 flex items-center">
+                    <a href="#service" className="text-white hover:text-[#00A3A1] flex items-center">
                       Explore More <FaArrowRight className="ml-2" />
                     </a>
                   </div>
@@ -278,7 +278,7 @@ const OmanyePage = () => {
             </div>
             <div className="w-full lg:w-6/12">
               <div className="mb-8">
-                <span className="text-blue-600 font-medium mb-2 block">How We Works</span>
+                <span className="text-[#00A3A1] font-medium mb-2 block">How We Work</span>
                 <h2 className="text-4xl font-bold">
                   How To Work With Elever <br />
                   Construction Builder
@@ -289,18 +289,18 @@ const OmanyePage = () => {
                 <div className="flex">
                   <div className="flex-shrink-0 mr-6 relative">
                     <img src="assets/images/service/07.svg" alt="service" className="h-12" />
-                    <span className="absolute -top-2 -right-2 bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">1</span>
+                    <span className="absolute -top-2 -right-2 bg-[#00A3A1] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">1</span>
                   </div>
                   <div>
                     <h5 className="text-xl font-bold mb-2">Consultation & Planning</h5>
-                    <p className="text-gray-600">We begin with a thorough consultation to understand your vision, budget, and project goals. Our team works with you to develop a tailored plan</p>
+                    <p className="">We begin with a thorough consultation to understand your vision, budget, and project goals. Our team works with you to develop a tailored plan</p>
                   </div>
                 </div>
 
                 <div className="flex">
                   <div className="flex-shrink-0 mr-6 relative">
                     <img src="assets/images/service/08.svg" alt="service" className="h-12" />
-                    <span className="absolute -top-2 -right-2 bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">2</span>
+                    <span className="absolute -top-2 -right-2 bg-[#00A3A1] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">2</span>
                   </div>
                   <div>
                     <h5 className="text-xl font-bold mb-2">Design & Pre-Construction</h5>
@@ -311,7 +311,7 @@ const OmanyePage = () => {
                 <div className="flex">
                   <div className="flex-shrink-0 mr-6 relative">
                     <img src="assets/images/service/09.svg" alt="service" className="h-12" />
-                    <span className="absolute -top-2 -right-2 bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">3</span>
+                    <span className="absolute -top-2 -right-2 bg-[#00A3A1] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">3</span>
                   </div>
                   <div>
                     <h5 className="text-xl font-bold mb-2">Construction & Delivery</h5>
@@ -328,7 +328,7 @@ const OmanyePage = () => {
       <div className="py-16 bg-[#00A3A1] text-white" id="project">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-blue-400 font-medium mb-2 block">Recent Projects</span>
+            <span className="text-white font-medium mb-2 block">Recent Projects</span>
             <h2 className="text-4xl font-bold">Our Completed Projects</h2>
           </div>
 
@@ -377,7 +377,7 @@ const OmanyePage = () => {
       <div className="py-16 bg-gray-900 text-white" id="team">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-blue-400 font-medium mb-2 block">Expert Team Members</span>
+            <span className="text-white font-medium mb-2 block">Expert Team Members</span>
             <h2 className="text-4xl font-bold">Meet The Awesome Team</h2>
           </div>
 
@@ -385,13 +385,13 @@ const OmanyePage = () => {
             <div className="w-full lg:w-6/12 px-4 mb-8">
               <div className="bg-gray-800 rounded-lg overflow-hidden flex flex-col lg:flex-row">
                 <a href="#team" className="thumbnail block lg:w-1/3">
-                  <img src={`assets/images/team/01.webp`} alt="team" className="w-full h-64 lg:h-auto object-cover" />
+                  <img src={`assets/images/team/01.webp`} alt="team" className="w-full h-full lg:h-full object-cover" />
                 </a>
                 <div className="p-6 lg:w-2/3">
                   <a href="#team">
                     <h3 className="text-2xl font-bold mb-2">Henry George</h3>
                   </a>
-                  <span className="text-blue-400 block mb-4">Safety Officer</span>
+                  <span className="text-[#00A3A1] block mb-4">Safety Officer</span>
                   <p className="text-gray-400 mb-4">
                     Highly skilled and experienced construction expert, known for his deep expertise in
                     managing large-scale construction projects
@@ -415,7 +415,7 @@ const OmanyePage = () => {
                   <a href="#team">
                     <h3 className="text-xl font-bold mb-2">Thomas Bryant</h3>
                   </a>
-                  <span className="text-blue-400 block mb-2">Civil Engineer</span>
+                  <span className="text-[#00A3A1] block mb-2">Civil Engineer</span>
                   <p className="text-gray-400 text-sm mb-2">
                     Highly skilled and experienced construction expert, known for his deep expertise in
                     managing large-scale construction projects
@@ -437,7 +437,7 @@ const OmanyePage = () => {
                   <a href="#team">
                     <h3 className="text-xl font-bold mb-2">Benjamin Clarke</h3>
                   </a>
-                  <span className="text-blue-400 block mb-2">Project Coordinator</span>
+                  <span className="text-[#00A3A1] block mb-2">Project Coordinator</span>
                   <p className="text-gray-400 text-sm mb-2">
                     Highly skilled and experienced construction expert, known for his deep expertise in
                     managing large-scale construction projects
@@ -459,7 +459,7 @@ const OmanyePage = () => {
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-blue-600 font-medium mb-2 block">Client's Feedback</span>
+            <span className="text-[#00A3A1] font-medium mb-2 block">Client's Feedback</span>
             <h2 className="text-4xl font-bold">
               What Our Client's Say After <br />
               Get Our Service
@@ -526,7 +526,7 @@ const OmanyePage = () => {
       <div className="py-16 bg-white" id="blog">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-blue-600 font-medium mb-2 block">Latest News</span>
+            <span className="text-[#00A3A1] font-medium mb-2 block">Latest News</span>
             <h2 className="text-4xl font-bold">Articles & Blog Posts</h2>
           </div>
 
@@ -548,7 +548,7 @@ const OmanyePage = () => {
                     <p className="text-gray-600 mb-4">
                       {blog.text}
                     </p>
-                    <a href="#blog" className="text-blue-600 hover:text-blue-800 flex items-center">
+                    <a href="#blog" className="text-[#00A3A1] hover:text-[#0a8f8d] flex items-center">
                       Read More <FaArrowRight className="ml-2" />
                     </a>
                   </div>
@@ -560,7 +560,7 @@ const OmanyePage = () => {
       </div>
 
       {/* Brands */}
-      <div className="py-12 bg-gray-50">
+      {/* <div className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex overflow-x-auto space-x-12 items-center py-4">
             {brands.map((brand, index) => (
@@ -570,10 +570,10 @@ const OmanyePage = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Footer */}
-      <footer className="py-12 bg-gray-900 text-white" id="footer">
+      {/* <footer className="py-12 bg-gray-900 text-white" id="footer">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full md:w-1/4 px-4 mb-8">
@@ -626,12 +626,12 @@ const OmanyePage = () => {
             <p>&copy; {new Date().getFullYear()} OMANYE FZ -LLC. All Rights Reserved.</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
 
       {/* Mobile Menu Button */}
       <button
         onClick={toggleSidebar}
-        className="fixed bottom-8 right-8 bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg lg:hidden"
+        className="fixed bottom-8 right-8 bg-[#00A3A1] text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg lg:hidden"
       >
         <span className="sr-only">Open Menu</span>
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

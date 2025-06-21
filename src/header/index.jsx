@@ -36,7 +36,7 @@ const Header = () => {
                     <div className="flex items-center mt-2 md:mt-0">
                         <span className="text-gray-600 mr-3 text-sm">Follow Us On:</span>
                         <div className="flex space-x-3">
-                            <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors"><FaFacebookF className="text-sm" /></a>
+                            <a href="#" className="text-gray-600 hover:text-[#00a3A1] transition-colors"><FaFacebookF className="text-sm" /></a>
                             <a href="#" className="text-gray-600 hover:text-pink-600 transition-colors"><FaInstagram className="text-sm" /></a>
                             <a href="#" className="text-gray-600 hover:text-green-600 transition-colors"><FaWhatsapp className="text-sm" /></a>
                             <a href="#" className="text-gray-600 hover:text-blue-700 transition-colors"><FaLinkedinIn className="text-sm" /></a>
@@ -62,7 +62,7 @@ const Header = () => {
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center space-x-8">
                         <div className="relative group">
-                            <button className="flex items-center text-gray-800 hover:text-blue-600 font-medium transition-colors">
+                            <button className="flex items-center text-gray-800 hover:text-[#00a3A1] font-medium transition-colors">
                                 Services
                                 <FaChevronDown className="ml-1 text-xs transition-transform group-hover:rotate-180" />
                             </button>
@@ -144,9 +144,9 @@ const Header = () => {
                             </div>
                         </div>
 
-                        <a href="/contact-us" className="text-gray-800 hover:text-blue-600 font-medium transition-colors">Contact</a>
-                        <a href="/our-products" className="text-gray-800 hover:text-blue-600 font-medium transition-colors">Products</a>
-                                                <a href="/products-detail" className="text-gray-800 hover:text-blue-600 font-medium transition-colors">Product Query</a>
+                        <a href="/contact-us" className="text-gray-800 hover:text-[#00a3A1] font-medium transition-colors">Contact</a>
+                        <a href="/our-products" className="text-gray-800 hover:text-[#00a3A1] font-medium transition-colors">Products</a>
+                                                <a href="/products-detail" className="text-gray-800 hover:text-[#00a3A1] font-medium transition-colors">Product Query</a>
 
                     </nav>
 
@@ -154,7 +154,7 @@ const Header = () => {
                     <div className="flex items-center space-x-4">
                         <button
                             onClick={toggleSearch}
-                            className="text-gray-600 hover:text-blue-600 p-2 transition-colors"
+                            className="text-gray-600 hover:text-[#00a3A1] p-2 transition-colors"
                             aria-label="Search"
                         >
                             <FaSearch className="text-lg" />
@@ -162,7 +162,7 @@ const Header = () => {
 
                         <a
                             href="contact-us"
-                            className="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#00a3A1] hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md"
+                            className="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#00A3A1] hover:bg-[#0a8f8d] transition-colors shadow-sm hover:shadow-md"
                         >
                             Get a Quote
                             <FaLongArrowAltRight className="ml-1 text-xs" />
@@ -296,7 +296,7 @@ const ServiceMenuItem = ({ icon, title, description, link, isHighlighted = false
                 <img src={icon} alt={title} className="h-5 w-5" />
             </div>
             <div>
-                <h4 className={`text-sm font-medium ${isHighlighted ? 'text-blue-700' : 'text-gray-800 group-hover:text-blue-600'}`}>
+                <h4 className={`text-sm font-medium ${isHighlighted ? 'text-[#00a3A1]' : 'text-gray-800 group-hover:text-[#00a3A1]'}`}>
                     {title}
                 </h4>
                 <p className="text-xs text-gray-500 mt-1">{description}</p>
@@ -310,7 +310,7 @@ const MobileServiceItem = ({ title, link }) => {
     return (
         <a
             href={link}
-            className="block py-2 px-3 -mx-3 rounded-md text-gray-700 hover:bg-gray-100 hover:text-blue-600 transition-colors"
+            className="block py-2 px-3 -mx-3 rounded-md text-gray-700 hover:bg-gray-100 hover:text-[#00a3A1] transition-colors"
         >
             {title}
         </a>

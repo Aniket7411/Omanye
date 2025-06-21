@@ -44,7 +44,7 @@ const ContactUs = () => {
                         {/* Left Side - Contact Info */}
                         <div className="lg:w-1/2 lg:pr-12 mb-12 lg:mb-0">
                             <div className="contact-main-wrapper-left">
-                                <span className="text-blue-600 font-semibold block mb-4">Get In Touch</span>
+                                <span className="text-[#00A3A1] font-semibold block mb-4">Get In Touch</span>
                                 <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                                     We are always ready to help you <br />
                                     and answer your questions
@@ -137,7 +137,7 @@ const ContactUs = () => {
                                     </div>
                                     <button
                                         type="submit"
-                                        className="rts-btn btn-primary w-full md:w-auto px-8 py-3 bg-[#00a3A1] hover:bg-blue-800 text-white font-bold rounded-lg transition duration-300"
+                                        className="rts-btn btn-primary w-full md:w-auto px-8 py-3 bg-[#00a3A1] hover:bg-[#0a8f8d] text-white font-bold rounded-lg transition duration-300"
                                     >
                                         Send Message
                                     </button>
@@ -153,7 +153,7 @@ const ContactUs = () => {
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                     <h3 className="text-2xl font-bold mb-6">Our Location</h3>
                     <div className="aspect-w-16 aspect-h-9">
-                        <iframe
+                        {/* <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.904071149987!2d55.27041531536492!3d25.23912598387338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE0JzIwLjkiTiA1NcKwMTYnMTkuNiJF!5e0!3m2!1sen!2sae!4v1620000000000!5m2!1sen!2sae"
                             width="100%"
                             height="450"
@@ -161,7 +161,8 @@ const ContactUs = () => {
                             allowFullScreen=""
                             loading="lazy"
                             className="rounded-lg"
-                        ></iframe>
+                        ></iframe> */}
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.1890042548685!2d55.78368562370279!3d25.665028662596168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef60bee567a253b%3A0x80fd444807765d7!2sRAKEZ%20Compass%20Coworking%20Centre!5e0!3m2!1sen!2sin!4v1750503855124!5m2!1sen!2sin" width="100%" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>

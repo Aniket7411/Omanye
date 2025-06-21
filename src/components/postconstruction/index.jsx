@@ -401,7 +401,7 @@ const PostConstruction = () => {
             <div className="col-xl-6 col-lg-12 pt-0 md:pt-8">
               <div className="how-we-works-wrappers">
                 <div className="title-wrapper-left mb-12">
-                  <span className="pre text-blue-500 font-semibold block mb-2">How We Works</span>
+                  <span className="pre text-blue-500 font-semibold block mb-2">How We Work</span>
                   <h2 className="title text-3xl md:text-4xl font-bold leading-tight">
                     How To Work With OMANYE <br />
                     Construction Builder
@@ -411,7 +411,7 @@ const PostConstruction = () => {
                 <div className="single-choose-us-one flex mb-8">
                   <div className="icon relative mr-6 flex-shrink-0">
                     <img src="assets/images/service/07.svg" alt="service" className="w-12 h-12" />
-                    <span className="absolute -top-3 -right-3 bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                    <span className="absolute -top-3 -right-3 bg-gray-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">1</span>
                   </div>
                   <div className="info-wrapper">
                     <h5 className="title text-xl font-bold mb-2">Consultation & Planning</h5>

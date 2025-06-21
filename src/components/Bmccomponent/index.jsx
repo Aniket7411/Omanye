@@ -140,19 +140,19 @@ const BMCServicePage = () => {
               <div className="flex border-b border-gray-200">
                 <button
                   onClick={() => setActiveTab('home')}
-                  className={`py-3 px-6 font-medium ${activeTab === 'home' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
+                  className={`py-3 px-6 font-medium ${activeTab === 'home' ? 'text-gray-600 border-b-2 border-gray-700' : 'text-gray-500 hover:text-gray-700'}`}
                 >
                   What's Included
                 </button>
                 <button
                   onClick={() => setActiveTab('profile')}
-                  className={`py-3 px-6 font-medium ${activeTab === 'profile' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
+                  className={`py-3 px-6 font-medium ${activeTab === 'profile' ? 'text-gray-600 border-b-2 border-gray-700' : 'text-gray-500 hover:text-gray-700'}`}
                 >
                   No Compromises on Quality
                 </button>
                 <button
                   onClick={() => setActiveTab('contact')}
-                  className={`py-3 px-6 font-medium ${activeTab === 'contact' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
+                  className={`py-3 px-6 font-medium ${activeTab === 'contact' ? 'text-gray-600 border-b-2 border-gray-700' : 'text-gray-500 hover:text-gray-700'}`}
                 >
                   Customized Solutions
                 </button>
@@ -163,7 +163,7 @@ const BMCServicePage = () => {
                   <div className="space-y-6">
                     <div className="flex items-start">
                       <div className="bg-blue-100 p-2 rounded-full mr-4">
-                        <FaCheck className="text-blue-600" />
+                        <FaCheck className="text-gray-500" />
                       </div>
                       <div>
                         <strong className="text-lg">Product and Project Development:</strong> Our team of architects and
@@ -174,7 +174,7 @@ const BMCServicePage = () => {
                     </div>
                     <div className="flex items-start">
                       <div className="bg-blue-100 p-2 rounded-full mr-4">
-                        <FaCheck className="text-blue-600" />
+                        <FaCheck className="text-gray-500" />
                       </div>
                       <div>
                         <strong className="text-lg">Material Prescription:</strong> We prioritize quality in
@@ -185,7 +185,7 @@ const BMCServicePage = () => {
                     </div>
                     <div className="flex items-start">
                       <div className="bg-blue-100 p-2 rounded-full mr-4">
-                        <FaCheck className="text-blue-600" />
+                        <FaCheck className="text-gray-500" />
                       </div>
                       <div>
                         <strong className="text-lg">Project Management:</strong> We take the stress out of building
@@ -200,7 +200,7 @@ const BMCServicePage = () => {
                   <div className="space-y-6">
                     <div className="flex items-start">
                       <div className="bg-blue-100 p-2 rounded-full mr-4">
-                        <FaCheck className="text-blue-600" />
+                        <FaCheck className="text-gray-500" />
                       </div>
                       <div>
                         <strong className="text-lg">Quality Assurance:</strong> Our rigorous quality control processes ensure that every material meets international standards and specifications.
@@ -208,7 +208,7 @@ const BMCServicePage = () => {
                     </div>
                     <div className="flex items-start">
                       <div className="bg-blue-100 p-2 rounded-full mr-4">
-                        <FaCheck className="text-blue-600" />
+                        <FaCheck className="text-gray-500" />
                       </div>
                       <div>
                         <strong className="text-lg">Certified Suppliers:</strong> We work only with certified and reputable suppliers who share our commitment to excellence.
@@ -216,7 +216,7 @@ const BMCServicePage = () => {
                     </div>
                     <div className="flex items-start">
                       <div className="bg-blue-100 p-2 rounded-full mr-4">
-                        <FaCheck className="text-blue-600" />
+                        <FaCheck className="text-gray-500" />
                       </div>
                       <div>
                         <strong className="text-lg">Testing & Validation:</strong> All materials undergo thorough testing in accredited laboratories before delivery.
@@ -229,7 +229,7 @@ const BMCServicePage = () => {
                   <div className="space-y-6">
                     <div className="flex items-start">
                       <div className="bg-blue-100 p-2 rounded-full mr-4">
-                        <FaCheck className="text-blue-600" />
+                        <FaCheck className="text-gray-500" />
                       </div>
                       <div>
                         <strong className="text-lg">Tailored Solutions:</strong> We analyze your specific project requirements to provide the most suitable material recommendations.
@@ -237,7 +237,7 @@ const BMCServicePage = () => {
                     </div>
                     <div className="flex items-start">
                       <div className="bg-blue-100 p-2 rounded-full mr-4">
-                        <FaCheck className="text-blue-600" />
+                        <FaCheck className="text-gray-500" />
                       </div>
                       <div>
                         <strong className="text-lg">Technical Support:</strong> Our team of experts provides ongoing technical support throughout your project lifecycle.
@@ -245,7 +245,7 @@ const BMCServicePage = () => {
                     </div>
                     <div className="flex items-start">
                       <div className="bg-blue-100 p-2 rounded-full mr-4">
-                        <FaCheck className="text-blue-600" />
+                        <FaCheck className="text-gray-500" />
                       </div>
                       <div>
                         <strong className="text-lg">Flexible Delivery:</strong> We adapt our delivery schedules to match your construction timeline and workflow.
@@ -268,7 +268,7 @@ const BMCServicePage = () => {
             partner or you're looking to take the next step in your career, we want to hear from
             you!
           </p>
-          <a href="#" className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+          <a href="#" className="inline-block bg-white text-gray-500 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
             Make An Appointment
           </a>
         </div>
@@ -292,7 +292,7 @@ const BMCServicePage = () => {
             
             <div className="w-full lg:w-1/2">
               <div className="mb-8">
-                <span className="text-blue-600 font-medium mb-2 block">How We Works</span>
+                <span className="text-gray-500 font-medium mb-2 block">How We Work</span>
                 <h2 className="text-3xl font-bold">
                   How To Work With OMANYE <br />
                   Construction Builder
@@ -303,7 +303,7 @@ const BMCServicePage = () => {
                 <div className="flex">
                   <div className="flex-shrink-0 mr-6 relative">
                     <img src="assets/images/service/07.svg" alt="service" className="h-12" />
-                    <span className="absolute -top-2 -right-2 bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">1</span>
+                    <span className="absolute -top-2 -right-2 bg-[#00A3A1] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">1</span>
                   </div>
                   <div>
                     <h5 className="text-xl font-bold mb-2">Consultation & Planning</h5>
@@ -314,7 +314,7 @@ const BMCServicePage = () => {
                 <div className="flex">
                   <div className="flex-shrink-0 mr-6 relative">
                     <img src="assets/images/service/08.svg" alt="service" className="h-12" />
-                    <span className="absolute -top-2 -right-2 bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">2</span>
+                    <span className="absolute -top-2 -right-2 bg-[#00A3A1] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">2</span>
                   </div>
                   <div>
                     <h5 className="text-xl font-bold mb-2">Design & Pre-Construction</h5>
@@ -325,7 +325,7 @@ const BMCServicePage = () => {
                 <div className="flex">
                   <div className="flex-shrink-0 mr-6 relative">
                     <img src="assets/images/service/09.svg" alt="service" className="h-12" />
-                    <span className="absolute -top-2 -right-2 bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">3</span>
+                    <span className="absolute -top-2 -right-2 bg-[#00A3A1] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">3</span>
                   </div>
                   <div>
                     <h5 className="text-xl font-bold mb-2">Construction & Delivery</h5>

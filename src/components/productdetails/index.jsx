@@ -124,7 +124,7 @@ const ProductsPage = () => {
                 setSelectedCategory(null);
                 setSelectedSubCategory(null);
               }}
-              className={`px-4 py-2 rounded-full text-sm font-medium ${!selectedCategory ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+              className={`px-4 py-2 rounded-full text-sm font-medium ${!selectedCategory ? 'bg-[#00A3A1] text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
             >
               All Products
             </button>
@@ -135,7 +135,7 @@ const ProductsPage = () => {
                   setSelectedCategory(category);
                   setSelectedSubCategory(null);
                 }}
-                className={`px-4 py-2 rounded-full text-sm font-medium ${selectedCategory === category ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                className={`px-4 py-2 rounded-full text-sm font-medium ${selectedCategory === category ? 'bg-[#00A3A1] text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
               >
                 {category}
               </button>
@@ -152,7 +152,7 @@ const ProductsPage = () => {
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setSelectedSubCategory(null)}
-                className={`px-4 py-2 rounded-full text-sm font-medium ${!selectedSubCategory ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                className={`px-4 py-2 rounded-full text-sm font-medium ${!selectedSubCategory ? 'bg-[#00A3A1] text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
               >
                 All {selectedCategory}
               </button>
@@ -160,7 +160,7 @@ const ProductsPage = () => {
                 <button
                   key={subCat}
                   onClick={() => setSelectedSubCategory(subCat)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium ${selectedSubCategory === subCat ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium ${selectedSubCategory === subCat ? 'bg-[#00A3A1] text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
                 >
                   {subCat}
                 </button>
@@ -221,7 +221,7 @@ const ProductCard = ({ product }) => {
 
         <div className="mt-6">
           <Link to="/contact-us">
-            <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">
+            <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#00A3A1] hover:bg-[#0a8f8d]">
               Click for Quote          </button>
           </Link>
         </div>
